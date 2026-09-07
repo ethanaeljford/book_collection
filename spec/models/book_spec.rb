@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.describe Book, type: :model do
     describe "validations" do
     it "is valid with valid title" do
-      book = Book.new(title: "The Fountainhead", author: "Ayn Rand")
+      book = Book.new(title: "The Fountainhead", author: "Ayn Rand", price: 19.99, published_date: Date.new(1943, 5, 1))
       expect(book).to be_valid
     end
 
