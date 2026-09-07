@@ -6,5 +6,5 @@
   <%= link_to "Edit this book", edit_book_path(@book), class: "btn" %> |
   <%= link_to "Back to books", books_path, class: "btn" %>
 
-  <%= button_to "Destroy this book", @book, method: :delete, class: "btn btn-delete" %>
+  <%= link_to "Delete this book", delete_book_path(@book), class: "btn btn-delete" %>
 </div>
