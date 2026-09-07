@@ -2,15 +2,17 @@
 
 <% content_for :title, "Books" %>
 
-<h1>Ethans Best Book Collection -- Edit</h1>
+<h1>Ethans Best Book Collection</h1>
 
 <div id="books">
   <% @books.each do |book| %>
     <%= render book %>
     <p>
-      <%= link_to "Show this book", book %>
+      <%= link_to "Show this book", book, class: "btn" %>
+      <%= link_to "Edit this book", edit_book_path(book), class: "btn" %>
+      <%= link_to "Destroy this book", book, method: :delete, form: { data: { confirm: "Are you sure?" } }, class: "btn btn-delete" %>
     </p>
   <% end %>
 </div>
-
-<%= link_to "New book", new_book_path %>
+</br>
+<%= link_to "New book", new_book_path, class: "btn btn-create" %>
