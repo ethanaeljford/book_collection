@@ -1,7 +1,12 @@
 <div id="<%= dom_id book %>">
   <p>
-    <strong>Title:</strong>
-    <%= book.title %>
+    <strong>Title:</strong> <%= book.title %>
+    |
+    <strong>Author:</strong> <%= book.author %>
+    |
+    <strong>Price:</strong> <%= number_to_currency(book.price) %>
+    |
+    <strong>Published Date:</strong> <%= book.published_date&.strftime("%Y-%m-%d") %>
   </p>
 
 </div>

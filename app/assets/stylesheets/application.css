@@ -8,3 +8,59 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+ 
+ .btn {
+    disply: inline-block;
+    padding: 8px 16px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: #9b7e2e;
+    background-color: #ffffff;
+    cursor: pointer;
+    border-radius: 4px;
+    rounded: 4px;
+    border: 1px solid #9b7e2e;
+ }
+
+ .btn:hover {
+    background-color: #f0f0f0;
+    color: #9b7e2e;
+ }
+
+ .btn-delete {
+    
+    color: #fcfbf9;
+    background-color: #f33030;
+    border: 1px solid #000000;
+ }
+
+ .btn-create {    
+    color: #faf9f8;
+    background-color: #47f330;
+    border: 1px solid #000000;
+ }
+
+
+ form.button_to {
+    display: inline;
+ }
+ 
+ .notice, .alert {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-size: 16px;
+ }
+
+ .notice {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+ }
+ .alert {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+ }
