@@ -22,7 +22,7 @@ class BooksController < ApplicationController
   #ADDING DELETE
   def delete
   end
-  
+
 
   # POST /books or /books.json
   def create
@@ -30,9 +30,10 @@ class BooksController < ApplicationController
 
     respond_to do |format|
       if @book.save
-        format.html { redirect_to @book, notice: "Book was successfully created." }
+        format.html { redirect_to books_path, notice: "Book was successfully created." }
         format.json { render :show, status: :created, location: @book }
       else
+        flash.now[:alert] = "Book could not be created."
         format.html { render :new, status: :unprocessable_content }
         format.json { render json: @book.errors, status: :unprocessable_content }
       end
@@ -43,9 +44,10 @@ class BooksController < ApplicationController
   def update
     respond_to do |format|
       if @book.update(book_params)
-        format.html { redirect_to @book, notice: "Book was successfully updated.", status: :see_other }
+        format.html { redirect_to books_path, notice: "Book was successfully updated.", status: :see_other }
         format.json { render :show, status: :ok, location: @book }
       else
+        flash.now[:alert] = "Book could not be updated."
         format.html { render :edit, status: :unprocessable_content }
         format.json { render json: @book.errors, status: :unprocessable_content }
       end
