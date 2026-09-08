@@ -17,7 +17,7 @@ RSpec.describe Book, type: :model do
       expect(book).not_to be_valid
     end
 
-    it "is not valid without an author" do 
+    it "is not valid without an author." do 
         book = Book.new(title: "The Fountainhead", author: nil)
         expect(book).not_to be_valid
     end
