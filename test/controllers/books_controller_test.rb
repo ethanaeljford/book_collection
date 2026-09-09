@@ -17,7 +17,7 @@ class BooksControllerTest < ActionDispatch::IntegrationTest
 
   test "should create book" do
     assert_difference("Book.count") do
-      post books_url, params: { book: { 
+      post books_url, params: { book: {
         title: @book.title,
         author: @book.author,
         price: @book.price,
