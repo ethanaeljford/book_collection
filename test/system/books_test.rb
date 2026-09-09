@@ -12,7 +12,7 @@ class BooksTest < ApplicationSystemTestCase
 
   test "should create book" do
     visit books_url
-    click_on "Add book"
+    click_on "Add Book"
 
     fill_in "Title", with: @book.title
     fill_in "Author", with: @book.author
