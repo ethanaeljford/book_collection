@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Users" %>
+
+<h1>Users</h1>
+
+<div id="users">
+  <% @users.each do |user| %>
+    <%= render user %>
+    <p>
+      <%= link_to "Show this user", user %>
+      <%= link_to "Edit this user", edit_user_path(user) %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New user", new_user_path %>
+<br>
+<%= link_to "Book Index", books_path %>
+<br>
+<%= link_to "User Books Index", user_books_path %>

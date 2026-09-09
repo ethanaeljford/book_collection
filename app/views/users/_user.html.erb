@@ -1,0 +1,10 @@
+<div id="<%= dom_id user %>">
+  <p>
+    <strong>Username:</strong>
+    <%= user.username %>
+  </p>
+  <p>
+    <strong>Books:</strong>
+    <%= user.books.any? ? user.books.map(&:title).join(", ") : "None" %>
+  </p>
+</div>
