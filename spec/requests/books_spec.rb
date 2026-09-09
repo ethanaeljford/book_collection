@@ -3,8 +3,8 @@ require "rails_helper"
 RSpec.describe Book, type: :request do
     describe "POST /books" do
         context "sunny day - valid title" do
-            let(:valid_names) do 
-                { book: { title: "The Fountainhead", author: "Ayn Rand", 
+            let(:valid_names) do
+                { book: { title: "The Fountainhead", author: "Ayn Rand",
                         price: 19.99, published_date: Date.new(1943, 5, 1) } }
         end
 
@@ -13,7 +13,7 @@ RSpec.describe Book, type: :request do
                 post books_path, params: valid_names
         }.to change(Book, :count).by(1)
         end
-        
+
         it "sets the correct flash notice" do
             post books_path, params: valid_names
             expect(flash[:notice]).to eq("Book was successfully created.")
@@ -31,7 +31,7 @@ RSpec.describe Book, type: :request do
             { book: { title: "The Fountainhead", author: "",
             price: 19.99, published_date: Date.new(1943, 5, 1) } }
         end
-    
+
         it "does not save the book to the database" do
             expect {
                 post books_path, params: invalid_author
@@ -53,7 +53,7 @@ RSpec.describe Book, type: :request do
         let(:invalid_price) do
             { book: { title: "The Fountainhead", author: "Ayn Rand", price: -10.00, published_date: Date.new(1943, 5, 1) } }
         end
-    
+
         it "does not save the book to the database" do
             expect {
                 post books_path, params: invalid_price
@@ -75,7 +75,7 @@ RSpec.describe Book, type: :request do
         let(:invalid_date) do
             { book: { title: "The Fountainhead", author: "Ayn Rand", price: -10.00, published_date: nil } }
         end
-    
+
         it "does not save the book to the database" do
             expect {
                 post books_path, params: invalid_date
@@ -95,8 +95,8 @@ RSpec.describe Book, type: :request do
     end
 
     context "rainy day - invalid title" do
-        let(:invalid_title) do 
-            { book: { title: "", author: "Ayn Rand", 
+        let(:invalid_title) do
+            { book: { title: "", author: "Ayn Rand",
             price: 19.99, published_date: Date.new(1943, 5, 1) } }
         end
 

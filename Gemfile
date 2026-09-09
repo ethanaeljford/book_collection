@@ -24,7 +24,7 @@ gem "jbuilder"
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 
 # add gem to manage db
-gem 'yaml_db'
+gem "yaml_db"
 
 # Use the database-backed adapters for Rails.cache, Active Job, and Action Cable
 gem "solid_cache"
@@ -54,6 +54,12 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 
   gem "rspec-rails", "~> 6.0.0"
+
+  gem "sqlite3"
+end
+
+group :production do
+  gem "pg", "~> 1.1"
 end
 
 group :development do

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :books do
-    member do 
+    member do
       get :delete
     end
   end
@@ -15,5 +15,5 @@ Rails.application.routes.draw do
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   # Defines the root path route ("/")
-  # root "posts#index"
+  root "books#index"
 end

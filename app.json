@@ -1,0 +1,13 @@
+{
+    "name": "book-collection",
+    "description": "CSCE 431 Book Collection Lab",
+    "env": {
+        "RAILS_ENV": { "value": "production"},
+        "RACK_ENV": { "value": "production"}
+    },
+    "addons": ["heroku-postgresql"],
+    "scripts": {
+        "postdeploy": "bundle exec rails db:migrate"
+    },
+    "buildpacks": [{ "url": "heroku/ruby" }]
+}

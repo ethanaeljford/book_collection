@@ -1,7 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
+  title: The Fountainhead
+  author: Ayn Rand
+  price: 19.99
+  published_date: 1943-05-01
 
 two:
-  title: MyString
+  title: Atlas Shrugged
+  author: Ayn Rand
+  price: 24.99
+  published_date: 1957-10-10
