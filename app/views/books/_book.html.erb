@@ -7,6 +7,8 @@
     <strong>Price:</strong> <%= number_to_currency(book.price) %>
     |
     <strong>Published Date:</strong> <%= book.published_date&.strftime("%Y-%m-%d") %>
+    |
+    <strong>Users:</strong> <%= book.users.any? ? book.users.map(&:username).join(", ") : "None" %>
   </p>
 
 </div>
