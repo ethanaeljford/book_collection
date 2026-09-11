@@ -24,3 +24,11 @@ Things you may want to cover:
 * DEV EDIT -- Ethanael Joseph Ford -- Why Did the chicken cross the road? 
 
 * To get to the other side! :D  V2 I forgot to add test lol
+
+AI Contribution:
+* Claude LLM
+* Helped Debug Some of my Code
+* Understand the steps to conneting to Heroku
+* Assisted in understanding Scaffolding
+* Ruby Syntax
+* CSS Formatting
