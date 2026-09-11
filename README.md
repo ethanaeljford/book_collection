@@ -32,3 +32,4 @@ AI Contribution:
 * Assisted in understanding Scaffolding
 * Ruby Syntax
 * CSS Formatting
+* Help making the RSPEC Tests
