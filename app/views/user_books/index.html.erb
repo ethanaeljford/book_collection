@@ -2,6 +2,11 @@
 
 <% content_for :title, "User books" %>
 
+<% flash.each do |key, value| %>
+  <p><%= value %></p>
+<% end %>
+<%= link_to "Sign Out", destroy_admin_session_path %>
+
 <h1>User Books</h1>
 
 <table>
