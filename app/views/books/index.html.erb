@@ -3,6 +3,12 @@
 <% content_for :title, "Books" %>
 
 <h1>Ethans Best Book Collection</h1>
+<h1>This is the authenticated version 2</h1>
+
+<h1>Youre logged in! Welcome to the dashboard!</h1>
+
+<%= link_to "Sign Out", destroy_admin_session_path %>
+
 
 <div id="books">
   <% @books.each do |book| %>
